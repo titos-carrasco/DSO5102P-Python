@@ -5,7 +5,7 @@ See this sites for details:
 * https://elinux.org/Das_Oszi_Protocol
 * https://randomprojects.org/wiki/Voltcraft_DSO-3062C
 
-![](./screenshot/2019-05-05 11:58:17.png)
+<img src="./screenshot/2019-05-05 11:58:17.png" alt="Screenshot" />
 
 My Hantek DSO5102P reports VID:PID as 049f:505a so I added ``/etc/udev/rules.d/99-dso5102P.rules``
 
