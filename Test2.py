@@ -5,7 +5,7 @@ import time
 from rcr.dso5102p.DSO5102P import DSO5102P
 
 def main():
-    dso = DSO5102P(  0x049f, 0x505a, False )
+    dso = DSO5102P(  0x049f, 0x505a, True )
 
     print( 'Listing /*.inf' )
     r = dso.RemoteShell( 'ls /*.inf' )

@@ -5,7 +5,7 @@ import time
 from rcr.dso5102p.DSO5102P import DSO5102P
 
 def main():
-    dso = DSO5102P(  0x049f, 0x505a, False )
+    dso = DSO5102P(  0x049f, 0x505a, True )
 
     r = dso.Echo( [ 1, 2, 3, 4, 5, 6 ] )
     print( 'Echo:', r )
@@ -20,19 +20,19 @@ def main():
     dso.KeyTrigger( 0x0D, 0x01 )            # MENU-ACQUIRE-KEY
 
     print( 'Lock Panel' )
-    dso.LockControlPanel( True )
-    time.sleep( 5 )
+    dso.LockControlPanel()
+    time.sleep( 2 )
     print( 'Unlock Panel' )
-    dso.LockControlPanel( False )
+    dso.UnLockControlPanel()
 
     print( 'Start Acquisition' )
-    dso.StartAcquisition( True )
-    time.sleep( 5 )
+    dso.StartAcquisition()
+    time.sleep( 2 )
     print( 'Stop Acquisition' )
-    dso.StartAcquisition( False )
-    time.sleep( 5 )
+    dso.StopAcquisition()
+    time.sleep( 2 )
     print( 'Start Acquisition' )
-    dso.StartAcquisition( True )
+    dso.StartAcquisition()
 
 # show time
 main()
