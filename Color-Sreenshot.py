@@ -22,7 +22,7 @@ def main():
             match Pixel:
                # color comments based on GUI color = Black setting
                # only tested Black and Blue GUI color setting
-               case 0:  #black background
+               case 0 | 160 | 108:  #black background
                   im[h,v,0] = 0
                   im[h,v,1] = 0
                   im[h,v,2] = 0
@@ -62,7 +62,7 @@ def main():
                   im[h,v,0] = 255
                   im[h,v,1] = 0
                   im[h,v,2] = 255
-               case 140 | 6:  #bottom bar bandwidth limit indicator
+               case 140 | 6 | 12:  #bottom bar bandwidth limit indicator
                   im[h,v,0] = 0
                   im[h,v,1] = 0
                   im[h,v,2] = 255
@@ -94,7 +94,7 @@ def main():
                   im[h,v,0] = 0
                   im[h,v,1] = 154
                   im[h,v,2] = 255
-               case 204: #yellow-grey
+               case 204 | 96: #yellow-grey
                   im[h,v,0] = 0
                   im[h,v,1] = 173
                   im[h,v,2] = 173
@@ -122,12 +122,12 @@ def main():
                   im[h,v,0] = 138
                   im[h,v,1] = 138
                   im[h,v,2] = 138
-               case 85: #menu title bar border
+               case 85 | 51: #menu title bar border
                   im[h,v,0] = 172
                   im[h,v,1] = 172
                   im[h,v,2] = 172
                case _:
-                  print('unmapped pixel value:')     #108 12 160 243 51 96 159   
+                  print('unmapped pixel value:')     # 243 159   
                   print(Pixel)
                   im[h,v,0] = 0
                   im[h,v,1] = 0
